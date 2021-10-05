@@ -29,13 +29,15 @@ class ItemListView extends StatelessWidget {
                 'Search',
                 textAlign: TextAlign.left,
               ),
-              Padding(padding: EdgeInsets.all(3)),
+              SizedBox(
+                width: 100,
+              ),
               Icon(
                 Icons.search,
                 size: 30,
               ),
               SizedBox(
-                width: 30,
+                width: 20,
               ),
               Icon(
                 Icons.sort,
@@ -43,12 +45,19 @@ class ItemListView extends StatelessWidget {
               ),
             ],
           ),
-          const Divider(
-            thickness: 1,
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Divider(
+              thickness: 1,
+            ),
           ),
-          const DecoratedBox(
-            decoration: BoxDecoration(color: Colors.grey),
-            child: Text(
+          const Padding(
+            padding: EdgeInsets.only(bottom: 15.0),
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            decoration: const BoxDecoration(color: Colors.grey),
+            child: const Text(
               '     Tuesday, 29 June',
             ),
           ),
